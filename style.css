@@ -111,11 +111,19 @@ header.hero {
 }
 .text-block {
   flex: 1 1 400px;
+  max-width: 90vw;       /* don’t exceed phone width */
+  padding: 0 1rem;
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease-out;
+  text-align: center;    /* centers text on mobile */
 }
-.text-block p { margin-bottom: 1rem; font-size: 1.1rem; }
+.text-block p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  word-break: break-word;
+}
 
 .story.appear .story-img,
 .story.appear .text-block {
