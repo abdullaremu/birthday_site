@@ -30,19 +30,7 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 
 sections.forEach(sec => appearOnScroll.observe(sec));
 
-/* ----- Floating Hearts ----- */
-const heartsContainer = document.querySelector('.hearts');
-function createHeart() {
-  const heart = document.createElement('div');
-  heart.classList.add('heart');
-  heart.textContent = '❤';
-  heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.fontSize = 15 + Math.random() * 20 + 'px';
-  heart.style.animationDuration = 5 + Math.random() * 5 + 's';
-  heartsContainer.appendChild(heart);
-  setTimeout(() => heart.remove(), 10000);
-}
-setInterval(createHeart, 800);
+
 
 /* ----- Music Control ----- */
 const musicToggle = document.getElementById('musicToggle');
